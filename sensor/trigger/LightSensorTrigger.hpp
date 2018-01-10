@@ -16,14 +16,14 @@ namespace foldimate
   public:
     static
       LightSensorTrigger *getInstance (const uint8_t & pin,
-				       const int &threshold = 768)
+				       const int &threshold = 300)
     {
       return new LightSensorTrigger (pin, threshold);
     }
 
     bool isOn ()
     {
-      return (analogRead (pin_) >= threshold_);
+      return (analogRead (pin_) < threshold_);
     }
 
     bool isOff ()

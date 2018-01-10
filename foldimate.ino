@@ -14,7 +14,7 @@ setup ()
   sv_body = foldimate::DomanServoController::getInstance (9, 0, 130);
   sv_left = foldimate::DomanServoController::getInstance (10, 0, 130);
   sv_right = foldimate::DomanServoController::getInstance (11, 0, 130);
-  light_sensor = foldimate::LightSensorTrigger::getInstance (A1);
+  light_sensor = foldimate::LightSensorTrigger::getInstance (A0, 800);
 }
 
 void
